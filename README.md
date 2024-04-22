@@ -1,133 +1,59 @@
-# Airlines-Dashboard
+# Distribution of Airlines - Dashboard
 
-### Dashboard Link : https://app.powerbi.com/groups/me/reports/384d017e-e935-44dc-9e7d-1626c1a36de1/ReportSection
+### Dashboard Link : https://app.powerbi.com/groups/me/reports/18d68471-11fc-4b6c-8317-7269cb4cb1d8/ReportSection2fd3311b94e000c60ac1?experience=power-bi
 
 ## Problem Statement
 
-This dashboard helps the airlines understand their customers better. It helps the airlines know if their customers are satisfied with their services. Through different ratings, they get to know their improvement area, & thus they can improve their services by identifying these area. It also lets them know the average delay & departure time, thus since by using this dashboard they have identified this problem, they can further work on factors responsible for these unwanted delays.
+This dashboard displays the distribution of active and inactive airlines across all countries worldwide. The dashboard should provide insights into the current status of airlines, allowing stakeholders to make informed decisions based on global trends.
 
-Since, number of neutral/dissatisfied customers (almost 57 %) are more than satisfied customers (around 43 %), thus in all they must work on improving their services. 
+The dataset used for this analysis was obtained from the kaggle website and a github repository with the links displayed below:
 
-Also since average delay in arrival & departure both is 15 minutes, thus they must try to reduce it.
 
+Continent Dataset: https://github.com/dbouquin/IS_608/blob/master/NanosatDB_munging/Countries-Continents.csv
 
 ### Steps followed 
 
-- Step 1 : Load data into Power BI Desktop, dataset is a csv file.
-- Step 2 : Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options.
-- Step 3 : Also since by default, profile will be opened only for 1000 rows so you need to select "column profiling based on entire dataset".
-- Step 4 : It was observed that in none of the columns errors & empty values were present except column named "Arrival Delay".
-- Step 5 : For calculating average delay time, null values were not taken into account as only less than 1% values are null in this column(i.e column named "Arrival Delay") 
-- Step 6 : In the report view, under the view tab, theme was selected.
-- Step 7 : Since the data contains various ratings, thus in order to represent ratings, a new visual was added using the three ellipses in the visualizations pane in report view. 
-- Step 8 : Visual filters (Slicers) were added for four fields named "Class", "Customer Type", "Gate Location" & "Type of travel".
-- Step 9 : Two card visuals were added to the canvas, one representing average departure delay in minutes & other representing average arrival delay in minutes.
-           Using visual level filter from the filters pane, basic filtering was used & null values were unselected for consideration into average calculation.
-           
-           Although, by default, while calculating average, blank values are ignored.
-- Step 10 : A bar chart was also added to the report design area representing the number of satisfied & neutral/unsatisfied customers. While creating this visual, field named "Gender" was also added to the Legends bucket, thus number of customers are also seggregated according the gender. 
-- Step 11 : Ratings Visual was used to represent different ratings mentioned below,
+- Step 1 : The downloaded datasets, which are csv files, are loaded into Microsoft excel.
+- Step 2 : The airline dataset is then cleaned by checking for duplicates row. None were found.
+- Step 3 : Nulll or empty values were checked for in the "Name" and cross referenced with it's ICAO or IATA code to identify the airline names. No null values were found.
+- Step 4 : The "Alias", "IATA", "ICAO", and "Callsign" columns weren't checked for null or empty values as they weren't paramount for our analysis.
+- Step 5 : The "Active" column was filtered to display only null values. Rows with null values in the column were then removed as those outliers would obscure the result of our analysis.
+- Step 6 : The "Country" column was also filtered to display empty values. The Airline names as well as it's ICAO codes were then cross-referenced to obtain their countries using the wikipedia link below.
+          https://en.wikipedia.org/wiki/List_of_airline_codes
+- Step 7 : There are 201 unique countries in the dataset and it would be impossible to create a visualization with 201 distinct fields. This countries were then grouped into their continents using the countries-continent.csv file using VLOOKUP.
+![Screenshot (62)](https://github.com/JKristilere/JKristilere.github.io/assets/120747811/f48ba5bc-10e3-4e5e-82d2-785774a69485)
+- Step 8 : At this point, we observed that some of the Country names referencing the same countries were spelt differently. As a result, we ensured that there were no multiple spellings of countries by filtering out the names of countries which had more than one spelling and then correcting them.
+- Step 9 : After the data had been clean to our satisfaction, we then proceeded to save the file in a csv format and then upload it to Power BI Desktop.
 
-  (a) Baggage Handling
+- Step 10 : Two card visuals were first added to show the total number of active airlines and inactive airlines.
 
-  (b) Check-in Services
-  
-  (c) Cleanliness
-  
-  (d) Ease of online booking
-  
-  (e) Food & Drink
-  
-  (f) In-flight Entertainment
+- Step 11 : A piechart was added to show the percentage of active and inactive airlines to it's total number.
 
-  (g) In-flight Service
-  
-  (h) In-flight wifi service
-  
-  (i) Leg Room service
-  
-  (j) On-board service
-  
-  (k) Online boarding
-  
-  (l) Seat comfort
-  
-  (m) Departure & arrival time convenience
-  
-In our dataset, Some parameters were assigned value 0, representing those parameters are not applicable for some customers.
+- Step 12 : A stacked column chart was also created to show the distribution of airlines across the various continents with the "Active" column added as a legend.
 
-All these values have been ignored while calculating average rating for each of the parameters mentioned above.
 
-- Step 12 : In the report view, under the insert tab, two text boxes were added to the canvas, in one of them name of the airlines was mentioned & in the other one company's tagline was written.
-- Step 13 : In the report view, under the insert tab, using shapes option from elements group a rectangle was inserted & similarly using image option company's logo was added to the report design area. 
-- Step 14 : Calculated column was created in which, customers were grouped into various age groups.
+- Step 13 : A map visual was then added to show spread of airlines across the globe. 
 
-for creating new column following DAX expression was written;
-       
-        Age Group = 
+- Step 14 : Two slicers were added, to manually filter countries and active or inactive fields. 
         
-        if(airline_passenger_satisfaction[Age]<=25, "0-25 (25 included)",
-        
-        if(airline_passenger_satisfaction[Age]<=50, "25-50 (50 included)",
-        
-        if(airline_passenger_satisfaction[Age]<=75, "50-75 (75 included)",
-        
-        "75-100 (100 included)")))
-        
-Snap of new calculated column ,
-
-![Snap_1](https://user-images.githubusercontent.com/102996550/174089602-ab834a6b-62ce-4b62-8922-a1d241ec240e.jpg)
-
-        
-- Step 15 : New measure was created to find total count of customers.
-
-Following DAX expression was written for the same,
-        
-        Count of Customers = COUNT(airline_passenger_satisfaction[ID])
-        
-A card visual was used to represent count of customers.
-
-![Snap_Count](https://user-images.githubusercontent.com/102996550/174090154-424dc1a4-3ff7-41f8-9617-17a2fb205825.jpg)
-
-        
- - Step 16 : New measure was created to find  % of customers,
- 
- Following DAX expression was written to find % of customers,
- 
-         % Customers = (DIVIDE(airline_passenger_satisfaction[Count of Customers], 129880)*100)
- 
- A card visual was used to represent this perecntage.
- 
- Snap of % of customers who preferred business class
- 
- ![Snap_Percentage](https://user-images.githubusercontent.com/102996550/174090653-da02feb4-4775-4a95-affb-a211ca985d07.jpg)
+- Step 15 : Further customizations were made to the dashboard to make it aesthetically pleasing.
 
  
- - Step 17 : New measure was created to calculate total distance travelled by flights & a card visual was used to represent total distance.
- 
- Following DAX expression was written to find total distance,
- 
-         Total Distance Travelled = SUM(airline_passenger_satisfaction[Flight Distance])
-    
- A card visual was used to represent this total distance.
+ - Step 16 : The report was then published to Power BI Service.
  
  
- ![Snap_3](https://user-images.githubusercontent.com/102996550/174091618-bf770d6c-34c6-44d4-9f5e-49583a6d5f68.jpg)
- 
- - Step 18 : The report was then published to Power BI Service.
- 
- 
-![Publish_Message](https://user-images.githubusercontent.com/102996550/174094520-3a845196-97e6-4d44-8760-34a64abc3e77.jpg)
+![Screenshot (63)](https://github.com/JKristilere/JKristilere.github.io/assets/120747811/a16b1aee-7ae6-4148-887c-290fdae271e2)
 
 # Snapshot of Dashboard (Power BI Service)
 
-![dashboard_snapo](https://user-images.githubusercontent.com/102996550/174096257-11f1aae5-203d-44fc-bfca-25d37faf3237.jpg)
+![Screenshot (65)](https://github.com/JKristilere/JKristilere.github.io/assets/120747811/e6af6c04-d043-4ba9-8bc6-85195dfca3af)
 
  
  # Report Snapshot (Power BI DESKTOP)
 
  
-![Dashboard_upload](https://user-images.githubusercontent.com/102996550/174074051-4f08287a-0568-4fdf-8ac9-6762e0d8fa94.jpg)
+![Screenshot (64)](https://github.com/JKristilere/JKristilere.github.io/assets/120747811/3aa579cc-efba-4085-9603-648c2ce888cb)
+
 
 # Insights
 
@@ -135,81 +61,24 @@ A single page report was created on Power BI Desktop & it was then published to 
 
 Following inferences can be drawn from the dashboard;
 
-### [1] Total Number of Customers = 129880
+### [1] Total Number of Airlines = 6156
 
-   Number of satisfied Customers (Male) = 28159 (21.68 %)
+a)  Total Active Airlines = 1253 (20.35%)
 
-   Number of satisfied Customers (Female) = 28269 (21.76 %)
-
-   Number of neutral/unsatisfied customers (Male) = 35822 (27.58 %)
-
-   Number of neutral/unsatisfied customers (Female) = 37630 (28.97 %)
+b) Total Inactive Airlines = 4903 (79.65%)
 
 
-           thus, higher number of customers are neutral/unsatisfied.
+        Thus, 79.65% of the airlines are currently inactive, which shows 
+        that the airline business industry is highly competitive and not as
+        profitable as one would expect.
+
            
-### [2] Average Ratings
 
-    a) Baggage Handling - 3.63/5
-    b) Check-in Service - 3.31/5
-    c) Cleanliness - 3.29/5
-    d) Ease of online booking - 2.88/5
-    e) Food & Drink - 3.21/5
-    f) In-flight Entertainment - 3.36/5
-    g) In-flight service - 3.64/5
-    h) In-flight Wifi service - 2.81/5
-    i) Leg room service - 3.37/5
-    j) On-board service - 3.38/5
-    k) Online boarding - 3.33/5
-    l) Seat comfort - 3.44/5
-    m) Departure & arrival convenience - 3.22/5
-  
-  while calculating average rating, null values have been ignored as they were not relevant for some customers. 
-  
-  These ratings will change if different visual filters will be applied.  
-  
-  ### [3] Average Delay 
-  
-      a) Average delay in arrival(minutes) - 15.09
-      b) Average delay in departure(minutes) - 14.71
-Average delay will change if different visual filters will be applied.
+### [2] Continent and Countries with the Highest Number of Airlines
+        While North America has the highest number of airlines, it ranks 
+        3rd in the highest number of active airlines, with Europe ranking
+        1st with 383, and Asia 2nd with 370.
 
- ### [4] Some other insights
- 
- ### Class
- 
- 1.1) 47.87 % customers travelled by Business class.
- 
- 1.2) 44.89 % customers travelled by Economy class.
- 
- 1.3) 7.25 % customers travelled by Economy plus class.
- 
-         thus, maximum customers travelled by Business class.
- 
- ### Age Group
- 
- 2.1)  21.69 % customers belong to '0-25' age group.
- 
- 2.2)  52.44 % customers belong to '25-50' age group.
- 
- 2.3)  25.57 % customers belong to '50-75' age group.
- 
- 2.4)  0.31 % customers belong to '75-100' age group.
- 
-         thus, maximum customers belong to '25-50' age group.
-         
-### Customer Type
-
-3.1) 18.31 % customers have customer type 'First time'.
-
-3.2) 81.69 % customers have customer type 'returning'.
-       
-       thus, more customers have customer type 'returning'.
-
-### Type of travel
-
-4.1) 69.06 % customers have travel type 'Business'.
-
-4.2) 30.94 % customers have travel type 'Personal'.
-
-        thus, more customers have travel type 'Business'.
+        This shows that majority of airlines operate within these regions
+        and flights both in and out of these regions being the most 
+        profitable.
