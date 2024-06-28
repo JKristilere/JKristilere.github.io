@@ -29,8 +29,6 @@ Success for this project would be based on whether our model can achieve an accu
 
 Data Dictionary:
 
-**Data Dictionary**
-
 * **Date** -- Date listed is local to the match
 * **Time** -- Time listed is local to the match venue. Time is written in the 24-hour notation.
 * **Round** -- Round or Phase of Competition
