@@ -29,24 +29,26 @@ Success for this project would be based on whether our model can achieve an accu
 
 Data Dictionary:
 
-Date -- Date listed is local to the match
-Time -- Time listed is local to the match venue. Time is written in the 24-hour notation.
-Round -- Round or Phase of Competition
-Day -- Day of week
-GF (Goals For) -- Goals scored by team
-GA (Goals Against) -- Goals scored against team
-xG (Expected Goals) -- xG totals include penalty kicks, but do not include penalty shootouts (unless otherwise noted). Provided by Opta.
-xGA (Expected Goals Allowed) -- xG totals include penalty kicks, but do not include penalty shootouts (unless otherwise noted).Provided by Opta.
-Poss (Possession) Calculated as the percentage of passes attempted
-attendance -- total crowd attendance for that fixture.
-Formation -- Number of players in each row from defenders to forwards, not including the goalkeeper.
-comp -- Competition the match is played in.
-result -- result of the fixture played by the team. W - Win, D - Draw, L - Loss
-opponent -- team played for that fixture.
-captain -- captain chosen for the team for the particular fixture.
-Sh (Shots Total) -- Total shots by team in the match. Does not include penalty kicks
-SoT (Shots on Target) -- Shots on target do not include penalty kicks
-Dist (Average Shot Distance) -- Average distance, in yards, from goal of all shots taken. Does not include penalty kicks
-FK -- Shots from Free Kicks
-PK -- Penalty Kicks Made
-PKatt -- Penalty Kicks Attempted
+**Data Dictionary**
+
+* **Date** -- Date listed is local to the match
+* **Time** -- Time listed is local to the match venue. Time is written in the 24-hour notation.
+* **Round** -- Round or Phase of Competition
+* **Day** -- Day of week
+* **GF (Goals For)** -- Goals scored by team
+* **GA (Goals Against)** -- Goals scored against team
+* **xG (Expected Goals)** -- xG totals include penalty kicks, but do not include penalty shootouts (unless otherwise noted). Provided by Opta.
+* **xGA (Expected Goals Allowed)** -- xG totals include penalty kicks, but do not include penalty shootouts (unless otherwise noted).Provided by Opta. 
+* **Poss (Possession)** Calculated as the percentage of passes attempted
+* **attendance** -- total crowd attendance for that fixture.
+* **Formation** -- Number of players in each row from defenders to forwards, not including the goalkeeper.
+* **comp** -- Competition the match is played in.
+* **result** -- result of the fixture played by the team. W - Win, D - Draw, L - Loss
+* **opponent** -- team played for that fixture.
+* **captain** -- captain chosen for the team for the particular fixture.
+* **Sh (Shots Total)** -- Total shots by team in the match. Does not include penalty kicks
+* **SoT (Shots on Target)** -- Shots on target do not include penalty kicks
+* **Dist (Average Shot Distance)** -- Average distance, in yards, from goal of all shots taken. Does not include penalty kicks
+* **FK** -- Shots from Free Kicks
+* **PK** -- Penalty Kicks Made
+* **PKatt** -- Penalty Kicks Attempted
