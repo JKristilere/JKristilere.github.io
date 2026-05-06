@@ -1,254 +1,590 @@
 <!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Jedidiah Kristilere — AI Engineer</title>
+  <meta name="description" content="AI Engineer specializing in intelligent systems, LLMs, and ML-powered applications for financial services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="dark-mode" id="body">
 
-<html>
-	<head>
-		<title>Kristilere Jedidiah Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="theme-icon">◐</span>
+  </button>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">JK<span class="nav-logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Kristilere Jedidiah Portfolio<br />
-						</h1> Jedidiah Kristilere is a results-driven AI Engineer and Machine Learning specialist with proven expertise in building intelligent systems, backend infrastructure, and AI-powered applications. With vast experience in designing and deploying AI agents, developing scalable APIs, and implementing RAG-based solutions he is proficient in transforming complex requirements into production-ready systems with focus on security, automation, and performance optimization.
-						Jedidiah holds a Bachelor’s Degree in Mechanical Engineering from Covenant University. An innovative problem-solver by nature, he thrives in collaborative, high-stakes environments where he can leverage the collective strengths of a team to deliver transformative technical solutions..
-						<p> <a href="www.linkedin.com/in/jedidiah-kristilere-cm4407">@jedidiahKristilere</a><a href=""></a><br />
-						<a href=""></a></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Jedidiah Kristilere</a>
-					</header>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <svg class="hero-grid" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <defs>
+          <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+    </div>
 
-				<!-- Nav -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text mono">Available for consulting & opportunities</span>
+      </div>
 
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
+      <h1 class="hero-name">
+        <span class="hero-name-first">Jedidiah</span>
+        <span class="hero-name-last">Kristilere</span>
+      </h1>
 
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/jedidiah-kristilere-cm4407/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/JKristilere" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+      <div class="hero-role">
+        <span class="mono hero-role-prefix">{'role': '</span><span id="typedRole" class="hero-typed"></span><span class="hero-cursor mono">|</span><span class="mono hero-role-suffix">'}</span>
+      </div>
 
-				<!-- Main -->
-					<div id="main">
+      <p class="hero-tagline">
+        Building intelligent systems where <em>engineering rigour</em><br>
+        meets the frontier of <em>AI.</em>
+      </p>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									
-									<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Sentiment-Analysis">Sentiment Analysis of 2022 World Cup Tweets in Nigeria<br />
-									</a></h2>
-									<p>In this project I carried out the analysis of emotions and sentiments behind the tweets in Nigeria concerning the 2022 FIFA World Cup.</p>
-								</header>
-								<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Sentiment-Analysis" class="image main"><img src="images/Sentiment Analysis.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Sentiment-Analysis" class="button large">View Project</a></li>
-								</ul>
-							</article>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-									
-										<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Sales-Analysis">Sales Analysis in Power BI<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Sales-Analysis" class="image fit"><img src="images/market-analysis.webp" alt="" /></a>
-									<p>Creation of Dashboards and Dax Measures showing the Sales Analysis of an AdventureWorks Dataset in Power BI</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Sales-Analysis" class="button">View Project</a></li>
-									</ul>
-								</article>
+      <div class="hero-meta mono">
+        <span>📍 Lagos, Nigeria</span>
+        <span class="hero-meta-sep">·</span>
+        <span>Bluechip Technologies</span>
+        <span class="hero-meta-sep">·</span>
+        <span>B.Eng. Mech. Eng.</span>
+      </div>
+    </div>
 
+    <div class="hero-scroll-hint">
+      <span class="mono">scroll</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
 
-							<article>
-								<header>
-								
-									<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Instagram-Sentiment-Analysis">Sentiment Analysis of Instagram Playstore Reviews<br />
-									</a></h2>
-								</header>
-								<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Instagram-Sentiment-Analysis" class="image fit"><img src="images/instagram.ppm" alt="" /></a>
-								<p>In this project, the various emotions regarding the Instagram application on the Google Playstore platform were studied and examined using tools such as Python and Excel.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Instagram-Sentiment-Analysis" class="button">View Project</a></li>
-								</ul>
-							</article>		
-						
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <div class="section-label mono">// 01 — about</div>
+          <h2 class="section-title">Engineer by training.<br><em>AI builder</em> by conviction.</h2>
+          <p>I'm a Junior AI Engineer at <strong>Bluechip Technologies</strong> in Lagos, where I design and deploy machine learning systems for Nigeria's leading financial institutions — including the Central Bank of Nigeria, Wema Bank, and Providus Bank.</p>
+          <p>My foundation is a B.Eng. in Mechanical Engineering from <strong>Covenant University (2023)</strong>, which gave me a deep appreciation for systems thinking, modelling, and precision — principles I now apply to building intelligent, production-ready AI solutions.</p>
+          <p>I'm driven by one question: <em>how can AI create real leverage for organisations operating in complex, high-stakes environments?</em> Whether it's detecting financial fraud in milliseconds or building tools that help banks understand their customers, I want the work to matter.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label mono">Major banks served</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label mono">ML projects deployed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">1</span>
+              <span class="stat-label mono">Research publication</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal reveal-delay">
+          <div class="about-card-stack">
+            <div class="about-card about-card-back">
+              <div class="mono about-card-label">core.expertise</div>
+              <ul class="about-card-list mono">
+                <li>→ LLM application development</li>
+                <li>→ ML pipeline engineering</li>
+                <li>→ Azure cloud infrastructure</li>
+                <li>→ Financial AI systems</li>
+                <li>→ API design & FastAPI</li>
+                <li>→ RAG architectures</li>
+              </ul>
+            </div>
+            <div class="about-card about-card-front">
+              <div class="about-card-header mono">profile.json</div>
+              <pre class="about-code">{
+  "name": "Jedidiah Kristilere",
+  "location": "Lagos, NG",
+  "role": "Junior AI Engineer",
+  "company": "Bluechip Technologies",
+  "education": {
+    "degree": "B.Eng Mechanical Eng",
+    "school": "Covenant University",
+    "year": 2023
+  },
+  "open_to": [
+    "consulting",
+    "grad school",
+    "collaboration"
+  ]
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-							<article>
-								<header>
-								
-									<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Breast-Cancer-Project">Breast Cancer Project<br />
-									</a></h2>
-								</header>
-								<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Breast-Cancer-Project" class="image fit"><img src="images/Breast Cancer.jpg" alt="" /></a>
-								<p>Predicting whether a patient has breast cancer or not by building a Machine Learning Classification Model based on their medical attributes</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Breast-Cancer-Project" class="button">View Project</a></li>
-								</ul>
-							</article>	
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label mono">// 02 — skills</div>
+        <h2 class="section-title">Technical <em>Arsenal</em></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">⚙</span>
+            <h3>AI / Machine Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag-primary">Large Language Models</span>
+            <span class="skill-tag skill-tag-primary">RAG Systems</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">Cosine Similarity</span>
+            <span class="skill-tag">Fraud Detection</span>
+            <span class="skill-tag">Time Series</span>
+            <span class="skill-tag">Classification</span>
+          </div>
+        </div>
+        <div class="skill-category reveal reveal-delay">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">☁</span>
+            <h3>Cloud & Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag-primary">Azure AI Services</span>
+            <span class="skill-tag skill-tag-primary">FastAPI</span>
+            <span class="skill-tag">Redis / Upstash</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS (expanding)</span>
+            <span class="skill-tag">Azure Cognitive</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">{ }</span>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag-primary">Python</span>
+            <span class="skill-tag">Pandas / NumPy</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">SOLIDWORKS</span>
+          </div>
+        </div>
+        <div class="skill-category reveal reveal-delay">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">◈</span>
+            <h3>Engineering</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag-primary">Systems Design</span>
+            <span class="skill-tag">Technical Writing</span>
+            <span class="skill-tag">Curriculum Design</span>
+            <span class="skill-tag">Research & Analysis</span>
+            <span class="skill-tag">Stakeholder Comms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-							<article>
-								<header>
-								
-									<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Global-Airline-Distribution">Distribution of Airlines Across the Globe<br />
-									</a></h2>
-								</header>
-								<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Global-Airline-Distribution" class="image fit"><img src="images/Airline.jpg" alt="" /></a>
-								<p>This project invovles creating a Power BI dashboard which indentifies key metrics and information regarding the distribution of active
-									and inactive airlines acrpss the globe </p>
-								<ul class="actions special">
-									<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Global-Airline-Distribution" class="button">View Project</a></li>
-								</ul>
-							</article>	
+  <!-- Experience Section -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label mono">// 03 — experience</div>
+        <h2 class="section-title">Where I've <em>Shipped</em></h2>
+      </div>
+      <div class="timeline">
 
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date mono">2023 — Present</span>
+              <span class="timeline-badge">Current Role</span>
+            </div>
+            <h3 class="timeline-role">Junior AI Engineer</h3>
+            <p class="timeline-company">Bluechip Technologies · Lagos, Nigeria</p>
+            <p class="timeline-desc">Designing and deploying AI/ML products for Nigeria's most significant financial institutions. Work spans the full lifecycle from research and prototyping to production deployment on Azure infrastructure.</p>
+            <div class="timeline-achievements">
+              <div class="achievement">
+                <span class="achievement-icon">⬡</span>
+                <span>Built a real-time <strong>fraud detection system</strong> for Wema Bank using anomaly detection and ML classification models</span>
+              </div>
+              <div class="achievement">
+                <span class="achievement-icon">⬡</span>
+                <span>Developed a <strong>GDP forecasting model</strong> for the Central Bank of Nigeria incorporating macroeconomic indicators and time-series analysis</span>
+              </div>
+              <div class="achievement">
+                <span class="achievement-icon">⬡</span>
+                <span>Engineered a <strong>customer segmentation pipeline</strong> for Providus Bank using clustering and behavioral analytics</span>
+              </div>
+              <div class="achievement">
+                <span class="achievement-icon">⬡</span>
+                <span>Built an <strong>AI-powered applicant screening system</strong> combining LLM evaluation with cosine similarity scoring</span>
+              </div>
+              <div class="achievement">
+                <span class="achievement-icon">⬡</span>
+                <span>Designed a comprehensive <strong>AI/ML training curriculum</strong> for Union Bank employees — bridging technical depth with accessibility</span>
+              </div>
+              <div class="achievement">
+                <span class="achievement-icon">⬡</span>
+                <span>Integrated <strong>Redis/Upstash caching</strong> into FastAPI services on Azure, significantly reducing latency on high-volume endpoints</span>
+              </div>
+            </div>
+            <div class="timeline-stack">
+              <span class="stack-tag mono">Python</span>
+              <span class="stack-tag mono">Azure</span>
+              <span class="stack-tag mono">FastAPI</span>
+              <span class="stack-tag mono">LLMs</span>
+              <span class="stack-tag mono">Redis</span>
+              <span class="stack-tag mono">scikit-learn</span>
+            </div>
+          </div>
+        </div>
 
-							<article>
-								<header>
-								
-									<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Bulldozer-Price-Prediction">Predicting the Prices of Bulldozers<br />
-									</a></h2>
-								</header>
-								<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Bulldozer-Price-Prediction" class="image fit"><img src="images/bulldozer.jpg" alt="" /></a>
-								<p>Building a Machine Learning Regression Model for predicting the sale prices of bulldozers given it's characteristics and previous examples of how much similar bulldozers were sold for.  </p>
-								<ul class="actions special">
-									<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Bulldozer-Price-Prediction" class="button">View Project</a></li>
-								</ul>
-							</article>	
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date mono">2019 — 2023</span>
+              <span class="timeline-badge timeline-badge-edu">Education</span>
+            </div>
+            <h3 class="timeline-role">B.Eng. Mechanical Engineering</h3>
+            <p class="timeline-company">Covenant University · Ota, Nigeria</p>
+            <p class="timeline-desc">Strong academic record with undergraduate research culminating in a published paper. Gained deep foundations in systems modelling, thermodynamics, and engineering design — principles that translate directly to building robust AI systems.</p>
+            <div class="timeline-achievements">
+              <div class="achievement">
+                <span class="achievement-icon">⬡</span>
+                <span>Research publication in undergraduate study period</span>
+              </div>
+              <div class="achievement">
+                <span class="achievement-icon">⬡</span>
+                <span>Proficiency in <strong>SOLIDWORKS</strong> and computational engineering tools</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-								<article>
-									<header>
-									
-										<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Heart-Disease-Project">Heart Disease Project<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Heart-Disease-Project" class="image fit"><img src="images/Heart-Disease.jpeg" alt="" /></a>
-									<p>Predicting whether a patient has heart disease or not by building a Machine Learning Classification Model based on his or her medical attributes</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Heart-Disease-Project" class="button">View Project</a></li>
-									</ul>
-								</article>	
-							
-							
-								<article>
-									<header>
-									
-										<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/flight-price-prediction">Flight Price Prediction<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/JKristilere/JKristilere.github.io/tree/flight-price-prediction" class="image fit"><img src="images/flight-ticket-prices.jpeg" alt="" /></a>
-									<p>Building a machine learning model capable of predicting flight prices based on various factors surrounding fight bookings.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/flight-price-prediction" class="button">View Project</a></li>
-									</ul>
-								</article>	
+      </div>
+    </div>
+  </section>
 
-								<article>
-									<header>
-									
-										<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Football-Match-Prediction">Predicting Premier League Machines and Conducting Exploratory Data Analysis<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Football-Match-Prediction" class="image fit"><img src="images/Football.jpg" alt="" /></a>
-									<p>Conducting Exploratory Data Analysis to uncover insights and building a classification machine learning model based off the previous two seasons to predict future premier league matches. </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Football-Match-Prediction" class="button">View Project</a></li>
-									</ul>
-								</article>
-							
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label mono">// 04 — projects</div>
+        <h2 class="section-title">Selected <em>Work</em></h2>
+      </div>
 
-								<article>
-									<header>
-									
-										<h2><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Modern-Portfolio-Theory">Building an Optimal Portfolio Using The Modern Portfolio Theory<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/JKristilere/JKristilere.github.io/tree/Modern-Portfolio-Theory" class="image fit"><img src="images/MPT.png" alt="" /></a>
-									<p>This project aims to build an optimal portfolio of different assests from Technology Companies in the S&P 500 using the Modern Portfolio Theory developed by Harry Markowitz. </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/JKristilere/JKristilere.github.io/tree/Modern-Portfolio-Theory" class="button">View Project</a></li>
-									</ul>
-								</article>
+      <div class="projects-grid">
 
+        <article class="project-card project-card-featured reveal">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag mono">Featured</span>
+              <span class="project-tag project-tag-type mono">NLP · Sentiment</span>
+            </div>
+            <h3 class="project-title">World Cup Twitter Sentiment Analysis</h3>
+            <p class="project-desc">Analysed emotions and sentiments behind Nigerian tweets during the 2022 FIFA World Cup. Processed thousands of social media data points using NLP pipelines to surface real public opinion trends.</p>
+            <div class="project-tech">
+              <span class="mono">Python</span>
+              <span class="mono">NLTK</span>
+              <span class="mono">Pandas</span>
+              <span class="mono">Matplotlib</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Sentiment-Analysis" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
-							<!-- Posts -->
-							<section class="posts">
+        <article class="project-card reveal reveal-delay">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag project-tag-type mono">ML · Classification</span>
+            </div>
+            <h3 class="project-title">Breast Cancer Detection Model</h3>
+            <p class="project-desc">ML classification model predicting breast cancer diagnosis from medical attributes with high accuracy, demonstrating strong data preprocessing and model evaluation practices.</p>
+            <div class="project-tech">
+              <span class="mono">Python</span>
+              <span class="mono">scikit-learn</span>
+              <span class="mono">Pandas</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Breast-Cancer-Project" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
+        <article class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag project-tag-type mono">Finance · NLP</span>
+            </div>
+            <h3 class="project-title">Instagram Playstore Sentiment Analysis</h3>
+            <p class="project-desc">Studied and examined user emotions regarding the Instagram app on Google Playstore using Python-based NLP tools and Excel for structured reporting.</p>
+            <div class="project-tech">
+              <span class="mono">Python</span>
+              <span class="mono">Excel</span>
+              <span class="mono">NLP</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Instagram-Sentiment-Analysis" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
-					</div>
+        <article class="project-card reveal reveal-delay">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag project-tag-type mono">Finance · ML</span>
+            </div>
+            <h3 class="project-title">Optimal Portfolio — Modern Portfolio Theory</h3>
+            <p class="project-desc">Built an optimal portfolio of S&P 500 technology assets using Harry Markowitz's Modern Portfolio Theory, implementing efficient frontier analysis and risk-return optimisation.</p>
+            <div class="project-tech">
+              <span class="mono">Python</span>
+              <span class="mono">NumPy</span>
+              <span class="mono">Matplotlib</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Modern-Portfolio-Theory" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
+        <article class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag project-tag-type mono">Regression · ML</span>
+            </div>
+            <h3 class="project-title">Bulldozer Price Prediction</h3>
+            <p class="project-desc">Regression model predicting auction sale prices of bulldozers from equipment characteristics and historical pricing data. Kaggle competition dataset.</p>
+            <div class="project-tech">
+              <span class="mono">Python</span>
+              <span class="mono">RandomForest</span>
+              <span class="mono">scikit-learn</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Bulldozer-Price-Prediction" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
+        <article class="project-card reveal reveal-delay">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag project-tag-type mono">BI · Dashboard</span>
+            </div>
+            <h3 class="project-title">Global Airline Distribution — Power BI</h3>
+            <p class="project-desc">Interactive Power BI dashboard identifying key metrics on global active and inactive airline distribution, with custom DAX measures and geographic visualisations.</p>
+            <div class="project-tech">
+              <span class="mono">Power BI</span>
+              <span class="mono">DAX</span>
+              <span class="mono">Data Viz</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Global-Airline-Distribution" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
+        <article class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag project-tag-type mono">Classification · ML</span>
+            </div>
+            <h3 class="project-title">Heart Disease Prediction</h3>
+            <p class="project-desc">ML classification model identifying heart disease risk from patient medical attributes. Includes thorough EDA and model comparison across multiple algorithms.</p>
+            <div class="project-tech">
+              <span class="mono">Python</span>
+              <span class="mono">scikit-learn</span>
+              <span class="mono">Seaborn</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Heart-Disease-Project" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p><br />
-								Lagos, Nigeria</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(234) 814-354-8491</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">kristilere14@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
+        <article class="project-card reveal reveal-delay">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag project-tag-type mono">Regression · ML</span>
+            </div>
+            <h3 class="project-title">Flight Price Prediction</h3>
+            <p class="project-desc">ML model predicting flight ticket prices based on route, timing, airline, and booking factors. Demonstrates feature engineering for travel industry datasets.</p>
+            <div class="project-tech">
+              <span class="mono">Python</span>
+              <span class="mono">XGBoost</span>
+              <span class="mono">Pandas</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/flight-price-prediction" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
-									<li><a href="https://www.linkedin.com/in/jedidiah-kristilere-cm4407/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/JKristilere" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+        <article class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-tag-row">
+              <span class="project-tag project-tag-type mono">Sports · EDA</span>
+            </div>
+            <h3 class="project-title">Premier League Match Prediction</h3>
+            <p class="project-desc">EDA and ML classification model predicting Premier League match outcomes from two seasons of performance data. Explores team form, home advantage, and feature importance.</p>
+            <div class="project-tech">
+              <span class="mono">Python</span>
+              <span class="mono">scikit-learn</span>
+              <span class="mono">EDA</span>
+            </div>
+            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Football-Match-Prediction" class="project-link" target="_blank" rel="noopener">
+              View Project <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+      </div>
 
-			</div>
+      <div class="projects-cta reveal">
+        <a href="https://github.com/JKristilere" target="_blank" rel="noopener" class="btn btn-ghost">
+          View All on GitHub →
+        </a>
+      </div>
+    </div>
+  </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-text reveal">
+          <div class="section-label mono">// 05 — contact</div>
+          <h2 class="section-title">Let's <em>Build</em><br>Something.</h2>
+          <p>Whether you're looking for an AI engineering collaborator, exploring consulting opportunities, or just want to discuss intelligent systems — I'd love to hear from you.</p>
+          <div class="contact-links">
+            <a href="mailto:kristilere14@gmail.com" class="contact-link">
+              <span class="contact-link-icon">✉</span>
+              <div>
+                <span class="contact-link-label mono">Email</span>
+                <span class="contact-link-value">kristilere14@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/jedidiah-kristilere-cm4407/" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-link-icon">in</span>
+              <div>
+                <span class="contact-link-label mono">LinkedIn</span>
+                <span class="contact-link-value">jedidiah-kristilere-cm4407</span>
+              </div>
+            </a>
+            <a href="https://github.com/JKristilere" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-link-icon">⌥</span>
+              <div>
+                <span class="contact-link-label mono">GitHub</span>
+                <span class="contact-link-value">github.com/JKristilere</span>
+              </div>
+            </a>
+            <a href="tel:+2348143548491" class="contact-link">
+              <span class="contact-link-icon">◎</span>
+              <div>
+                <span class="contact-link-label mono">Phone</span>
+                <span class="contact-link-value">+234 814 354 8491</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal reveal-delay">
+          <form class="contact-form" id="contactForm">
+            <div class="form-field">
+              <label class="mono" for="name">name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label class="mono" for="email">email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-field">
+              <label class="mono" for="subject">subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-field">
+              <label class="mono" for="message">message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me what you're working on…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message →
+            </button>
+            <p class="form-note mono">* Form opens your mail client. Alternatively, email directly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	</body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="mono footer-copy">© 2025 Jedidiah Kristilere</span>
+        <span class="mono footer-credit">Engineered with intent · Lagos, NG</span>
+        <div class="footer-links">
+          <a href="https://github.com/JKristilere" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/jedidiah-kristilere-cm4407/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:kristilere14@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
 </html>
