@@ -58,39 +58,47 @@
       <div class="hero-orb hero-orb-2"></div>
     </div>
 
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span class="badge-text mono">Available for consulting & opportunities</span>
+    <div class="hero-content" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span class="badge-text mono">Available for consulting & opportunities</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="hero-name-first">Jedidiah</span>
+          <span class="hero-name-last">Kristilere</span>
+        </h1>
+
+        <div class="hero-role">
+          <span class="mono hero-role-prefix">{'role': '</span><span id="typedRole" class="hero-typed"></span><span class="hero-cursor mono">|</span><span class="mono hero-role-suffix">'}</span>
+        </div>
+
+        <p class="hero-tagline">
+          Building intelligent systems where <em>engineering rigour</em><br>
+          meets the frontier of <em>AI.</em>
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+
+        <div class="hero-meta mono">
+          <span>📍 Lagos, Nigeria</span>
+          <span class="hero-meta-sep">·</span>
+          <span>Bluechip Technologies</span>
+          <span class="hero-meta-sep">·</span>
+          <span>B.Eng. Mech. Eng.</span>
+        </div>
       </div>
 
-      <h1 class="hero-name">
-        <span class="hero-name-first">Jedidiah</span>
-        <span class="hero-name-last">Kristilere</span>
-      </h1>
-
-      <div class="hero-role">
-        <span class="mono hero-role-prefix">{'role': '</span><span id="typedRole" class="hero-typed"></span><span class="hero-cursor mono">|</span><span class="mono hero-role-suffix">'}</span>
+      <!-- <div class="about-visual reveal reveal-delay">
+        <div class="about-photo-wrap">
+          <img src="images\new-profile.png" alt="Jedidiah Kristilere" class="about-photo" style="width: 300px; height: auto; margin-left: 80%;" />
+        </div>
       </div>
-
-      <p class="hero-tagline">
-        Building intelligent systems where <em>engineering rigour</em><br>
-        meets the frontier of <em>AI.</em>
-      </p>
-
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
-      </div>
-
-      <div class="hero-meta mono">
-        <span>📍 Lagos, Nigeria</span>
-        <span class="hero-meta-sep">·</span>
-        <span>Bluechip Technologies</span>
-        <span class="hero-meta-sep">·</span>
-        <span>B.Eng. Mech. Eng.</span>
-      </div>
-    </div>
+    </div> -->
 
     <div class="hero-scroll-hint">
       <span class="mono">scroll</span>
@@ -122,6 +130,7 @@
               <span class="stat-label mono">Research publication</span>
             </div>
           </div>
+
         </div>
         <div class="about-visual reveal reveal-delay">
           <div class="about-card-stack">
@@ -333,17 +342,17 @@
           <div class="project-card-inner">
             <div class="project-tag-row">
               <span class="project-tag mono">Featured</span>
-              <span class="project-tag project-tag-type mono">NLP · Sentiment</span>
+              <span class="project-tag project-tag-type mono">RAG Summarization</span>
             </div>
-            <h3 class="project-title">World Cup Twitter Sentiment Analysis</h3>
-            <p class="project-desc">Analysed emotions and sentiments behind Nigerian tweets during the 2022 FIFA World Cup. Processed thousands of social media data points using NLP pipelines to surface real public opinion trends.</p>
+            <h3 class="project-title">Smart Summarizer</h3>
+            <p class="project-desc">An open-source LangChain + FastAPI + Streamlit app that summarizes YouTube videos or podcasts into concise insights, chapters, and key takeaways — all powered by local LLMs and free tools (no API keys needed).</p>
             <div class="project-tech">
               <span class="mono">Python</span>
-              <span class="mono">NLTK</span>
-              <span class="mono">Pandas</span>
-              <span class="mono">Matplotlib</span>
+              <span class="mono">Langchain</span>
+              <span class="mono">FastAPI</span>
+              <span class="mono">Retrieval Augmented Generation</span>
             </div>
-            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Sentiment-Analysis" class="project-link" target="_blank" rel="noopener">
+            <a href="https://github.com/JKristilere/Smart-Summarizer" class="project-link" target="_blank" rel="noopener">
               View Project <span class="project-arrow">→</span>
             </a>
           </div>
@@ -352,16 +361,15 @@
         <article class="project-card reveal reveal-delay">
           <div class="project-card-inner">
             <div class="project-tag-row">
-              <span class="project-tag project-tag-type mono">ML · Classification</span>
+              <span class="project-tag project-tag-type mono">Agentic AI</span>
             </div>
-            <h3 class="project-title">Breast Cancer Detection Model</h3>
-            <p class="project-desc">ML classification model predicting breast cancer diagnosis from medical attributes with high accuracy, demonstrating strong data preprocessing and model evaluation practices.</p>
+            <h3 class="project-title">AI Research Assistant</h3>
+            <p class="project-desc">Multi-agent AI system built with CrewAI that conducts comprehensive research, analyzes findings, verifies facts, and generates professional reports.</p>
             <div class="project-tech">
               <span class="mono">Python</span>
-              <span class="mono">scikit-learn</span>
-              <span class="mono">Pandas</span>
+              <span class="mono">CrewAI</span>
             </div>
-            <a href="https://github.com/JKristilere/JKristilere.github.io/tree/Breast-Cancer-Project" class="project-link" target="_blank" rel="noopener">
+            <a href="https://github.com/JKristilere/AI-Research-Assistant" class="project-link" target="_blank" rel="noopener">
               View Project <span class="project-arrow">→</span>
             </a>
           </div>
